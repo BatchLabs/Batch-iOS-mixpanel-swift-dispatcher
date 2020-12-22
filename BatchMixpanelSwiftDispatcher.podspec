@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'BatchMixpanelSwiftDispatcher'
-  s.version          = '1.0.0'
+  s.version          = '1.0.1'
   s.summary          = 'Batch.com Events Dispatcher Mixpanel (Swift) implementation.'
 
   s.description      = <<-DESC
@@ -16,6 +16,7 @@ Pod::Spec.new do |s|
   s.platforms = {
     "ios" => "10.0"
   }
+  s.swift_version = ['5.0', '5.1', '5.2', '5.3']
 
   s.requires_arc = true
   s.static_framework = true

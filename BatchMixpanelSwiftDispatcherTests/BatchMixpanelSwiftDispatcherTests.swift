@@ -263,6 +263,30 @@ class BatchMixpanelSwiftDispatcherTests : XCTestCase {
             "utm_content": "jesuisuncontent",
         ])
     }
+    
+    func testInAppCloseError() {
+        let testPayload = PayloadMock()
+        
+        dispatcher.dispatchEvent(with: .messagingCloseError, payload: testPayload)
+
+        expectTrack(event: "batch_in_app_close_error", properties: [
+            "$source": "batch",
+            "utm_medium": "in-app",
+        ])
+    }
+    
+    func testInAppWebViewClickAnalyticsIdentifier() {
+        let testPayload = PayloadMock()
+        testPayload.webViewAnalyticsIdentifier = "test1234"
+        
+        dispatcher.dispatchEvent(with: .messagingWebViewClick, payload: testPayload)
+
+        expectTrack(event: "batch_in_app_webview_click", properties: [
+            "$source": "batch",
+            "utm_medium": "in-app",
+            "batch_webview_analytics_id": "test1234"
+        ])
+    }
 }
 
 extension BatchMixpanelSwiftDispatcherTests {

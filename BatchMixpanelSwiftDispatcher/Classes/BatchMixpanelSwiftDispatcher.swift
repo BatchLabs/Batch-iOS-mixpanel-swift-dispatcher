@@ -21,6 +21,7 @@ private struct Consts {
     static let MixpanelMedium = "utm_medium"
     static let MixpanelContent = "utm_content"
     static let MixpanelTrackingId = "batch_tracking_id"
+    static let MixpanelWebViewAnalyticsId = "batch_webview_analytics_id"
 }
 
 /// Describes instance methods that the dispatcher will use on Mixpanel
@@ -57,6 +58,10 @@ public class BatchMixpanelSwiftDispatcher : NSObject {
         if let trackingId = payload.trackingId {
             params[Consts.MixpanelCampaign] = trackingId
             params[Consts.MixpanelTrackingId] = trackingId
+        }
+        
+        if let webViewAnalyticsId = payload.webViewAnalyticsIdentifier {
+            params[Consts.MixpanelWebViewAnalyticsId] = webViewAnalyticsId
         }
         
         if let deeplink = payload.deeplink {
@@ -180,6 +185,10 @@ fileprivate extension BatchEventDispatcherType {
                 return "batch_in_app_close"
             case .messagingAutoClose:
                 return "batch_in_app_auto_close"
+            case .messagingCloseError:
+                return "batch_in_app_close_error"
+            case .messagingWebViewClick:
+                return "batch_in_app_webview_click"
             case .messagingClick:
                 return "batch_in_app_click"
             @unknown default:

@@ -7,16 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5105378424125A0100589FC6 /* Batch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5105378324125A0100589FC6 /* Batch.framework */; };
-		51134E2F2590E26800D8ADFB /* Mixpanel.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 51505BD2258CE44E00C1C1C7 /* Mixpanel.framework */; };
 		511BF8D22591E56300F32DF0 /* BatchMixpanelSwiftDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511BF8D12591E56300F32DF0 /* BatchMixpanelSwiftDispatcher.swift */; };
 		511BF8EB25920F9800F32DF0 /* BatchMixpanelSwiftDispatcherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511BF8EA25920F9800F32DF0 /* BatchMixpanelSwiftDispatcherTests.swift */; };
 		511BF8F02592107000F32DF0 /* InstantMock in Frameworks */ = {isa = PBXBuildFile; productRef = 511BF8EF2592107000F32DF0 /* InstantMock */; };
-		51505BD3258CE44E00C1C1C7 /* Mixpanel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51505BD2258CE44E00C1C1C7 /* Mixpanel.framework */; };
-		51505BD4258CE45200C1C1C7 /* Mixpanel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51505BD2258CE44E00C1C1C7 /* Mixpanel.framework */; };
+		51C49D9C25F7BEB200C8E4F6 /* Mixpanel.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51C49D9B25F7BEB200C8E4F6 /* Mixpanel.xcframework */; };
+		51C49D9D25F7BEB200C8E4F6 /* Mixpanel.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 51C49D9B25F7BEB200C8E4F6 /* Mixpanel.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		51C49DA025F7BEBE00C8E4F6 /* Mixpanel.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51C49D9B25F7BEB200C8E4F6 /* Mixpanel.xcframework */; };
+		51C49DA325F7BEC000C8E4F6 /* OCMock.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51C49DA225F7BEC000C8E4F6 /* OCMock.xcframework */; };
+		51C49DA825F7BEEC00C8E4F6 /* Batch in Frameworks */ = {isa = PBXBuildFile; productRef = 51C49DA725F7BEEC00C8E4F6 /* Batch */; };
+		51C49DAB25F7BEF200C8E4F6 /* Batch in Frameworks */ = {isa = PBXBuildFile; productRef = 51C49DAA25F7BEF200C8E4F6 /* Batch */; };
 		625AA2FA2424F4BB000DACC4 /* BatchMixpanelSwiftDispatcher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51D530C82412553C009E7531 /* BatchMixpanelSwiftDispatcher.framework */; };
 		625AA3132424F5E4000DACC4 /* Tests-Prefix.pch in Resources */ = {isa = PBXBuildFile; fileRef = 625AA3072424F538000DACC4 /* Tests-Prefix.pch */; };
-		625AA3172424F9F2000DACC4 /* Batch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5105378324125A0100589FC6 /* Batch.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,24 +31,34 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		51C49D9E25F7BEB200C8E4F6 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				51C49D9D25F7BEB200C8E4F6 /* Mixpanel.xcframework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		625AA3312424FAA9000DACC4 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 16;
 			files = (
-				51134E2F2590E26800D8ADFB /* Mixpanel.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		5105378324125A0100589FC6 /* Batch.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Batch.framework; path = Carthage/Build/iOS/Batch.framework; sourceTree = "<group>"; };
 		511BF8D12591E56300F32DF0 /* BatchMixpanelSwiftDispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BatchMixpanelSwiftDispatcher.swift; path = Classes/BatchMixpanelSwiftDispatcher.swift; sourceTree = "<group>"; };
 		511BF8E925920F9800F32DF0 /* BatchMixpanelSwiftDispatcherTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BatchMixpanelSwiftDispatcherTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		511BF8EA25920F9800F32DF0 /* BatchMixpanelSwiftDispatcherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatchMixpanelSwiftDispatcherTests.swift; sourceTree = "<group>"; };
-		51505BD2258CE44E00C1C1C7 /* Mixpanel.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Mixpanel.framework; path = Carthage/Build/iOS/Mixpanel.framework; sourceTree = "<group>"; };
+		51C49D9B25F7BEB200C8E4F6 /* Mixpanel.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Mixpanel.xcframework; path = Carthage/Build/Mixpanel.xcframework; sourceTree = "<group>"; };
+		51C49DA225F7BEC000C8E4F6 /* OCMock.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = OCMock.xcframework; path = Carthage/Build/OCMock.xcframework; sourceTree = "<group>"; };
 		51D530C82412553C009E7531 /* BatchMixpanelSwiftDispatcher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BatchMixpanelSwiftDispatcher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		51D530D3241256E8009E7531 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Module/Info.plist; sourceTree = "<group>"; };
 		625AA2F52424F4BB000DACC4 /* BatchMixpanelSwiftDispatcherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BatchMixpanelSwiftDispatcherTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -61,8 +72,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				51505BD3258CE44E00C1C1C7 /* Mixpanel.framework in Frameworks */,
-				5105378424125A0100589FC6 /* Batch.framework in Frameworks */,
+				51C49D9C25F7BEB200C8E4F6 /* Mixpanel.xcframework in Frameworks */,
+				51C49DA825F7BEEC00C8E4F6 /* Batch in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,10 +81,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				51505BD4258CE45200C1C1C7 /* Mixpanel.framework in Frameworks */,
-				625AA3172424F9F2000DACC4 /* Batch.framework in Frameworks */,
+				51C49DA025F7BEBE00C8E4F6 /* Mixpanel.xcframework in Frameworks */,
 				511BF8F02592107000F32DF0 /* InstantMock in Frameworks */,
+				51C49DA325F7BEC000C8E4F6 /* OCMock.xcframework in Frameworks */,
 				625AA2FA2424F4BB000DACC4 /* BatchMixpanelSwiftDispatcher.framework in Frameworks */,
+				51C49DAB25F7BEF200C8E4F6 /* Batch in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,8 +95,8 @@
 		5105378224125A0100589FC6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				5105378324125A0100589FC6 /* Batch.framework */,
-				51505BD2258CE44E00C1C1C7 /* Mixpanel.framework */,
+				51C49DA225F7BEC000C8E4F6 /* OCMock.xcframework */,
+				51C49D9B25F7BEB200C8E4F6 /* Mixpanel.xcframework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -150,12 +162,16 @@
 				51D530C42412553B009E7531 /* Sources */,
 				51D530C52412553B009E7531 /* Frameworks */,
 				51D530C62412553B009E7531 /* Resources */,
+				51C49D9E25F7BEB200C8E4F6 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = BatchMixpanelSwiftDispatcher;
+			packageProductDependencies = (
+				51C49DA725F7BEEC00C8E4F6 /* Batch */,
+			);
 			productName = "Batch-Mixpanel-Dispatcher";
 			productReference = 51D530C82412553C009E7531 /* BatchMixpanelSwiftDispatcher.framework */;
 			productType = "com.apple.product-type.framework";
@@ -177,6 +193,7 @@
 			name = BatchMixpanelSwiftDispatcherTests;
 			packageProductDependencies = (
 				511BF8EF2592107000F32DF0 /* InstantMock */,
+				51C49DAA25F7BEF200C8E4F6 /* Batch */,
 			);
 			productName = BatchMixpanelDispatcherTests;
 			productReference = 625AA2F52424F4BB000DACC4 /* BatchMixpanelSwiftDispatcherTests.xctest */;
@@ -212,6 +229,7 @@
 			mainGroup = 51D530BE2412553B009E7531;
 			packageReferences = (
 				511BF8EE2592107000F32DF0 /* XCRemoteSwiftPackageReference "InstantMock" */,
+				51C49DA625F7BEEC00C8E4F6 /* XCRemoteSwiftPackageReference "Batch-iOS-SDK" */,
 			);
 			productRefGroup = 51D530C92412553C009E7531 /* Products */;
 			projectDirPath = "";
@@ -555,6 +573,14 @@
 				minimumVersion = 2.5.5;
 			};
 		};
+		51C49DA625F7BEEC00C8E4F6 /* XCRemoteSwiftPackageReference "Batch-iOS-SDK" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "http://github.com/BatchLabs/Batch-iOS-SDK";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.17.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -562,6 +588,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 511BF8EE2592107000F32DF0 /* XCRemoteSwiftPackageReference "InstantMock" */;
 			productName = InstantMock;
+		};
+		51C49DA725F7BEEC00C8E4F6 /* Batch */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 51C49DA625F7BEEC00C8E4F6 /* XCRemoteSwiftPackageReference "Batch-iOS-SDK" */;
+			productName = Batch;
+		};
+		51C49DAA25F7BEF200C8E4F6 /* Batch */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 51C49DA625F7BEEC00C8E4F6 /* XCRemoteSwiftPackageReference "Batch-iOS-SDK" */;
+			productName = Batch;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

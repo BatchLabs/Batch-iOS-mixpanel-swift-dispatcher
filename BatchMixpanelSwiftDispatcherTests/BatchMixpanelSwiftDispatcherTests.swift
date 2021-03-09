@@ -282,6 +282,8 @@ class MixpanelInstanceMock: Mock, MixpanelInstanceDispatcherProtocol {
 }
 
 class PayloadMock: BatchEventDispatcherPayload {
+    var webViewAnalyticsIdentifier: String?
+    
     var trackingId: String?
     
     var deeplink: String?

@@ -1,3 +1,8 @@
+3.0.0
+-----
+
+ * Update Batch and Mixpanel versions.
+
 2.0.0
 -----
 

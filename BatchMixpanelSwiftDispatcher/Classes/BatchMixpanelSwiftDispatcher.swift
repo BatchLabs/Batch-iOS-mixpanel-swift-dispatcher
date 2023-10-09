@@ -40,9 +40,9 @@ fileprivate typealias MixpanelProperties = Properties
 public class BatchMixpanelSwiftDispatcher : NSObject {
     
     public static let instance = BatchMixpanelSwiftDispatcher()
-    
-    public var mixpanelInstance: MixpanelInstanceDispatcherProtocol?
-    
+
+    public var mixpanelInstances: [MixpanelInstanceDispatcherProtocol] = []
+
     private var warnedAboutNil: Bool = false
     
     override private init() {
@@ -165,12 +165,12 @@ extension BatchMixpanelSwiftDispatcher : BatchEventDispatcherDelegate {
             properties = self.inAppParams(fromPayload: payload)
         }
         
-        if (!warnedAboutNil && self.mixpanelInstance == nil) {
+        if (!warnedAboutNil && self.mixpanelInstances.isEmpty) {
             warnedAboutNil = true;
             print("BatchMixpanelObjcDispatcher - Cannot send event to Mixpanel as no instance has been configured. Did you set the mixpanelInstance property to your Mixpanel instance?")
         }
         
-        mixpanelInstance?.track(event: type.mixpanelName, properties: properties)
+        mixpanelInstances.forEach { $0.track(event: type.mixpanelName, properties: properties) }
     }
 }
 

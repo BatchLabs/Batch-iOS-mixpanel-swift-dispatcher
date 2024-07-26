@@ -13,8 +13,8 @@ let package = Package(
             targets: ["BatchMixpanelSwiftDispatcher"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/mixpanel/mixpanel-swift", from: "4.1.0"),
-        .package(url: "https://github.com/BatchLabs/Batch-iOS-SDK", from: "1.20.0"),
+        .package(url: "https://github.com/mixpanel/mixpanel-swift", from: "4.3.0"),
+        .package(url: "https://github.com/BatchLabs/Batch-iOS-SDK", from: "2.0.0"),
     ],
     targets: [
         .target(

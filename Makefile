@@ -1,7 +1,7 @@
 all: framework
 
 PROJECT=BatchMixpanelSwiftDispatcher.xcodeproj
-SIMULATOR='platform=iOS Simulator,name=iPhone 12'
+SIMULATOR='platform=iOS Simulator,name=iPhone 15'
 DERIVED_DATA=$(CURDIR)/DerivedData
 
 clean:
